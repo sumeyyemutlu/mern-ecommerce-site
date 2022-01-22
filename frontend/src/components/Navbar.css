@@ -1,0 +1,89 @@
+.navbar {
+    height: 110px;
+    width: 100%;
+    background-color: #1A5F7A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    z-index: 50;
+}
+.navbar__logo h2 {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family: 'Source Code Pro', monospace;
+}
+.navbar__links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.navbar__links > li {
+    padding-left: 1.5rem;
+}
+.navbar__links > li >a  {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+}
+.navbar__links > li >a > span {
+    display: flex;
+    align-items: center;
+    margin-left:8px;
+}
+.cart__link {
+    background-color: #333;
+    padding:10px;
+    border-radius: 8px;
+}
+.cart__link:hover {
+    background-color: #ffb30e;
+    color: white;
+}
+.cartlogo__badge {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 9px;
+    color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+.hamburger_menu {
+    width: 30px;
+    height: 30px;
+    display: none; /*şu an görünmesin responsive olunca görünsün diye none dedik*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+.hamburger_menu > div {
+    width: 100%;
+    height: 3px;
+    background-color:white;
+}
+.hamburger_menu:hover > div {
+    background-color: #ffb30e;
+
+}
+@media (max-width : 960px) {
+    .navbar__links {
+        display: none; /*hamburger menusu burada ortaya çıkacak*/
+    }
+    .hamburger_menu {
+        display: flex;
+    }
+}
+@media (max-width: 500px) {
+    .navbar__logo h2 {
+        font-size: 1rem;
+    }
+}
